@@ -1,16 +1,10 @@
-"""
-Wordle
-Assignment 1
-Semester 1, 2022
-CSSE1001/CSSE7030
-"""
 from __future__ import annotations
 from random import choice, seed
 from string import ascii_lowercase
 from typing import Optional
 
 
-from a1_support import (
+from support import (
     load_words,
     choose_word,
     VOCAB_FILE,
@@ -20,14 +14,6 @@ from a1_support import (
     INCORRECT,
     UNSEEN,
 )
-
-
-# Replace these <strings> with your name, student number and email address.
-__author__ = "<Thuy Linh Nguyen>, <47277021>"
-__email__ = "<s4727702@student.uq.edu.au>"
-
-
-# Add your functions here
 
 
 def has_won(guess: str, answer: str) -> bool:
@@ -191,7 +177,7 @@ def print_keyboard(history: tuple[tuple[str, str], ...]) -> None:
         Parameter:
             history (tuple<(str, str), >): result from update_history()
         Return
-            print list of all letters with the known information about which letters hav been guessed and their processed form
+            print list of all letters with the known information about which letters have been guessed and their processed form
     """
     dic_alphabet = dict.fromkeys(ascii_lowercase, UNSEEN) #create dictionary with key: alphabet anf value: UNSEEN
 
@@ -212,7 +198,7 @@ def print_keyboard(history: tuple[tuple[str, str], ...]) -> None:
 def print_stats(stats: tuple[int,...]) -> None:
     """ Print the stats of the game.
             Parameter:
-                stats (tuple<str>): tuple contains 7 elements representing which round won in 1-6 guess and the number of round lost.
+                stats (tuple<str>): tuple contains 7 elements representing which round won in 1-6 guesses and the number of rounds lost.
             Return: 
                 print status of game play
     """
@@ -223,12 +209,12 @@ def print_stats(stats: tuple[int,...]) -> None:
     return None
 
 def guess_next(words: tuple[str,...], history: tuple[[str, str], ...]) -> optional[str]:
-    """ Generate a guess word for user.
+    """ Generate a guess word for the user.
             Parameters:
-                words(tuple<str>): tuple contrains all the available vocabs
+                words(tuple<str>): tuple contains all the available vocabs
                 history (tuple<(str, str>, ...): result of uqdate_history
             Return
-                generate a valid guess without violate the previous processed guess
+                generate a valid guess without violating the previous processed guess
             
     """
     possible_list = list(words) #list store available vocab
