@@ -1,2 +1,3 @@
-# Guessing_words
-Random choose a word from list. 
+# Python-based games
+1. Guessing Words
+2. Escape dungeon
