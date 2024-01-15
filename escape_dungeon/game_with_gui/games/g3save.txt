@@ -1,0 +1,11 @@
+Inventory - Potion:1, 2
+Current Position - 1, 2
+Stat - -2, 0, 0
+Maze x - 7 8
+########
+P    H #
+###### #
+#LL M A#
+#L######
+#LLL   #
+###### #
